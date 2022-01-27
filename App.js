@@ -26,7 +26,7 @@ export default function App() {
     </View>
     <View style={styles.viewBotao}>
     <TouchableOpacity style={styles.buttonLog}>
-    <Text style={{ fontFamily: 'LEMONMILK', color: "#fff", fontSize: 20 }}>Login</Text>
+    <Text style={{ fontFamily: 'LEMONMILK', color: "#fff", fontSize: 20 }}>Sign In</Text>
     </TouchableOpacity>
     </View>
   </View>
