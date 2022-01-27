@@ -7,6 +7,7 @@ import { useFonts } from 'expo-font';
 export default function App() {
   let [fontsLoaded] = useFonts({
     'LEMONMILK': require('./assets/fonts/LEMONMILK-Light.otf'),
+    'Caviar': require('./assets/fonts/CaviarDreams_Bold.ttf'),
   });
 
   if (!fontsLoaded) {
@@ -20,13 +21,18 @@ export default function App() {
       style={styles.background}
     />
   <Text style={{ fontFamily: 'LEMONMILK', color: "#fff", fontSize: 35, marginLeft:-300, marginTop:50  }}>Olá</Text>
-  <Text style={{ fontFamily: 'LEMONMILK', color: "#fff", fontSize: 20, marginLeft:-100, marginTop:8, fontStyle:"italic" }}>Seja bem-vindo ao aplicativo:</Text>
+  <Text style={{ fontFamily: 'LEMONMILK', color: "#fff", fontSize: 20, marginLeft:-80, marginTop:8, fontStyle:"italic" }}>Seja bem-vindo(a) ao aplicativo:</Text>
     <View style={styles.containerLogo}>
-    <Image style={{width:430, marginTop:-405, marginLeft:-30}} resizeMode = "contain" source ={require('./assets/img/Mural.png')}></Image>
+    <Image style={{width:500, marginTop:-290, marginLeft:-60}} resizeMode = "contain" source ={require('./assets/img/Mural.png')}></Image>
     </View>
     <View style={styles.viewBotao}>
     <TouchableOpacity style={styles.buttonLog}>
-    <Text style={{ fontFamily: 'LEMONMILK', color: "#fff", fontSize: 20 }}>Sign In</Text>
+    <Text style={{ fontFamily: 'Caviar', color: "#fff", fontSize: 20 }}>Sign In</Text>
+    </TouchableOpacity>
+    </View>
+    <View style={styles.viewBotao}>
+    <TouchableOpacity style={styles.buttonCad}>
+    <Text style={{ fontFamily: 'Caviar', color: "#fff", fontSize: 20 }}>Sign Up</Text>
     </TouchableOpacity>
     </View>
   </View>
@@ -67,14 +73,25 @@ const styles = StyleSheet.create({
     marginLeft:-90
   },
   buttonLog:{
-    backgroundColor:'#05BC93',
-    height:45,
+    backgroundColor:'#117BAE',
+    height:65,
     alignItems:'center',
     justifyContent:'center',
     borderRadius: 50,
-    padding:10,
+    padding:3,
+    marginTop:-355
+  },
+  buttonCad:{
+    backgroundColor:'#05BC93',
+    height:65,
+    alignItems:'center',
+    justifyContent:'center',
+    borderRadius: 50,
+    padding:3,
+    marginTop:-250
   },
   viewBotao:{
-    width: '60%',
+    width: '85%',
+  
   },
 });
