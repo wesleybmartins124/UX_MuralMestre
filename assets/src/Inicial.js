@@ -10,6 +10,7 @@ export default function App() {
   let [fontsLoaded] = useFonts({
     'LEMONMILK': require('../fonts/LEMONMILK-Light.otf'),
     'Caviar': require('../fonts/CaviarDreams_Bold.ttf'),
+    'Balivia': require('../fonts/Balivia.ttf'),
   });
 
   if (!fontsLoaded) {

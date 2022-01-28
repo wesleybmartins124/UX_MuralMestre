@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { View,ScrollView,Image,TouchableOpacity} from 'react-native';
 import { Block, Checkbox, Text, theme, Button, Input} from "galio-framework";
 import { LinearGradient } from 'expo-linear-gradient';
@@ -6,7 +7,10 @@ import { StyleSheet } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
 
-export default function SignIn({navigation}) {
+export default function SignIn() {
+
+  const navigation = useNavigation();
+
  return (
   <View style={styles.container}>
   <LinearGradient
@@ -16,7 +20,7 @@ export default function SignIn({navigation}) {
   />
          <ScrollView
           showsVerticalScrollIndicator={false}
-          style={{ marginTop: '25%' }}
+          style={{ marginTop: '16.5%' }}
         >
            <Block  style={styles.profileCard} >
             <Block middle style={styles.avatarContainer}>
@@ -128,14 +132,17 @@ export default function SignIn({navigation}) {
                     
                  />
                   </Block>
-                  <Block
-                    row
-                    space="between"
+                   <Block
+                    flex
+                   middle
                     
-                  >
-                        <Text bold size={23} color="#32325D" style={{marginTop: 10}}>
-                      Introduzido por:
-                    </Text>
+                    >
+                         <View style={styles.viewBotao2}>
+                        <TouchableOpacity style={styles.buttonRegister} onPress={() => navigation.navigate('Feed')}>
+                        <Text style={{ fontFamily: 'Caviar', color: "#fff", fontSize: 20 }}>Cadastrar</Text>
+                        </TouchableOpacity>
+                        </View>
+
                     </Block>
 
                   <Block> 
@@ -237,7 +244,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     zIndex: 2,
     borderRadius:60/2,
-    width:350
+    width:350,
+
   },
   info: {
     paddingHorizontal: 40
@@ -286,5 +294,20 @@ const styles = StyleSheet.create({
     padding:3,
     marginTop:-68,
     marginLeft:165
+  },
+  buttonRegister:{
+    backgroundColor:'#05BC93',
+    height:65,
+    alignItems:'center',
+    justifyContent:'center',
+    borderRadius: 50,
+    padding:3,
+    marginTop:20,
+    marginLeft:5,
+    
+  },
+  viewBotao2:{
+    width: '55%',
+  
   },
 });
