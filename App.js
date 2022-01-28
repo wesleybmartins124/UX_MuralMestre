@@ -1,41 +1,37 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,Image, TouchableOpacity } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import AppLoading from 'expo-app-loading';
-import { useFonts } from 'expo-font';
+import * as React from 'react';
+import { StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export default function App() {
-  let [fontsLoaded] = useFonts({
-    'LEMONMILK': require('./assets/fonts/LEMONMILK-Light.otf'),
-    'Caviar': require('./assets/fonts/CaviarDreams_Bold.ttf'),
-  });
 
-  if (!fontsLoaded) {
-    return <AppLoading />;
-  }
+
+import Inicial from './assets/src/Inicial';
+import SignIn from './assets/src/SignIn';
+const Stack = createStackNavigator();
+
+
+
+
+export default function App()  {
+
   return (
-    <View style={styles.container}>
-    <LinearGradient
-      // Background Linear Gradient
-      colors={['#07f49e','#0f68a9']}
-      style={styles.background}
-    />
-  <Text style={{ fontFamily: 'LEMONMILK', color: "#fff", fontSize: 35, marginLeft:-300, marginTop:50  }}>Olá</Text>
-  <Text style={{ fontFamily: 'LEMONMILK', color: "#fff", fontSize: 20, marginLeft:-80, marginTop:8, fontStyle:"italic" }}>Seja bem-vindo(a) ao aplicativo:</Text>
-    <View style={styles.containerLogo}>
-    <Image style={{width:500, marginTop:-290, marginLeft:-60}} resizeMode = "contain" source ={require('./assets/img/Mural.png')}></Image>
-    </View>
-    <View style={styles.viewBotao}>
-    <TouchableOpacity style={styles.buttonLog}>
-    <Text style={{ fontFamily: 'Caviar', color: "#fff", fontSize: 20 }}>Sign In</Text>
-    </TouchableOpacity>
-    </View>
-    <View style={styles.viewBotao}>
-    <TouchableOpacity style={styles.buttonCad}>
-    <Text style={{ fontFamily: 'Caviar', color: "#fff", fontSize: 20 }}>Sign Up</Text>
-    </TouchableOpacity>
-    </View>
-  </View>
+    
+    <NavigationContainer>
+    <Stack.Navigator initialRouteName="Inicial">
+    <Stack.Screen 
+        name="Inicial" 
+        component={Inicial}
+        options={{headerShown: false}} />
+
+<Stack.Screen 
+        name="SignIn" 
+        component={SignIn}
+        options={{headerShown: false}} />
+
+    </Stack.Navigator>
+    
+    </NavigationContainer>
+    
   );
 }
 
