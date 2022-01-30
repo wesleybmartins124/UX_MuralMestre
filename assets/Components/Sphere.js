@@ -9,35 +9,41 @@ const Sphere = () => {
   const storyInfo = [
     {
       id: 1,
-      name: 'Your Story',
+      name: 'Sua Esfera',
       image: require('../img/storage/images/me.jpg'),
+      image1: require('../img/storage/images/status0.jpg'),
     },
     {
       id: 0,
-      name: 'Ram_Charan',
+      name: 'Prof° Rafael',
       image: require('../img/storage/images/profile1.jpg'),
+      image1: require('../img/storage/images/status1.jpg'),
     },
     {
       id: 0,
-      name: 'Tom',
+      name: 'Prof Ana',
       image: require('../img/storage/images/profile2.jpg'),
+      image1: require('../img/storage/images/status2.jpg'),
     },
     {
       id: 0,
-      name: 'The_Groot',
+      name: 'Prof° Rodrigo',
       image: require('../img/storage/images/profile3.jpg'),
+      image1: require('../img/storage/images/status3.jpg'),
     },
     ,
     {
       id: 0,
-      name: 'loverland',
+      name: 'Prof Antônia',
       image: require('../img/storage/images/profile4.jpg'),
+      image1: require('../img/storage/images/status4.jpeg'),
     },
     ,
     {
       id: 0,
-      name: 'chillhouse',
+      name: 'Prof° André',
       image: require('../img/storage/images/profile5.jpg'),
+      image1: require('../img/storage/images/status5.jpg'),
     },
   ];
 
@@ -54,6 +60,7 @@ const Sphere = () => {
               navigation.push('Status', {
                 name: data.name,
                 image: data.image,
+                image1: data.image1,
               })
             }>
             <View
@@ -88,7 +95,7 @@ const Sphere = () => {
                   backgroundColor: 'white',
                   borderWidth: 1.8,
                   borderRadius: 100,
-                  borderColor: '#c13584',
+                  borderColor: '#0f68a9',
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}>
@@ -99,7 +106,7 @@ const Sphere = () => {
                     width: '92%',
                     height: '92%',
                     borderRadius: 100,
-                    backgroundColor: 'orange',
+                    backgroundColor: '#07f49e',
                   }}
                 />
               </View>

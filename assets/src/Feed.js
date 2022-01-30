@@ -7,7 +7,8 @@ import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import {Ionicons} from '@expo/vector-icons';
 import { useScrollToTop } from '@react-navigation/native';
-import Sphere from '../Components/sphere';
+import Sphere from '../Components/Sphere';
+import Post from '../Components/Post';
 
 export default function Perfil() {
     let [fontsLoaded] = useFonts({
@@ -36,36 +37,14 @@ export default function Perfil() {
             <View style={styles.TextInputView}>
                 <TextInput placeholder={"Pesquisar..."} placeholderTextColor={"#898888"} style={styles.TextInput}/>
             </View>
-            <Text style={{ fontFamily: 'Balivia', fontSize:35, marginTop:-5,marginLeft:15 }}>Contatos</Text>
+            <Text style={{ fontFamily: 'Balivia', fontSize:35, marginTop:-5,marginLeft:15 }}>Contatos...</Text>
             <Sphere />
             <Block style={styles.divider} />
 
-            <View style={styles.mainPostView}>
-                    <FlatList
-                        renderItem={({item,index})=>(
-                            <View style={styles.postView}>
-                                    <View style={styles.postTitle}>
-                                        <View style={styles.imageView}>
-                                            <Image style={styles.artistPhoto}   source ={require('../img/Veronica.png')}/>
-                                            <View style={styles.titleView}>
-                                                <Text style={styles.artist_name}>Veronica</Text>
-                                                <Text style={styles.post_title}>Aprenda a fazer tinta guache para seus alunos...</Text>
-                                            </View>
-                                        </View> 
-                                        <View>
-                                            <Icon name="options-vertical" color="#989898"/>
-                                        </View>
-                                    </View>
-                                    
-                                    <TouchableOpacity style={styles.coverButton} >
-                                        <Image style={styles.coverPhoto}   source ={require('../img/Veronica.png')}/>
-                                    </TouchableOpacity>
-
-                            </View>
-                        )}
-                    />
+            <View >
+                    
+                    <Post/>
                 
-
             </View>
         </View>
         </ScrollView>

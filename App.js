@@ -8,7 +8,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Inicial from './assets/src/Inicial';
 import SignIn from './assets/src/SignIn';
 import Feed from './assets/src/Feed';
-import Sphere from './assets/Components/sphere';
+import Sphere from './assets/Components/Sphere';
+import Status from './assets/Components/Status';
+import Post from './assets/Components/Post';
 
 const Stack = createStackNavigator();
 
@@ -38,6 +40,17 @@ export default function App()  {
         <Stack.Screen 
         name="Sphere" 
         component={Sphere}
+        options={{headerShown: false}} />
+
+<Stack.Screen 
+        name="Status" 
+        component={Status}
+        options={{headerShown: false}} />
+
+
+<Stack.Screen 
+        name="Post" 
+        component={Post}
         options={{headerShown: false}} />
 
     </Stack.Navigator>

@@ -31,12 +31,12 @@ export default function App() {
     </View>
     <View style={styles.viewBotao}>
     <TouchableOpacity style={styles.buttonLog}   onPress={() => navigation.navigate('SignIn')}>
-    <Text style={{ fontFamily: 'Caviar', color: "#fff", fontSize: 20 }}>Sign In</Text>
+    <Text style={{ fontFamily: 'Caviar', color: "#fff", fontSize: 20 }}>Cadastro</Text>
     </TouchableOpacity>
     </View>
     <View style={styles.viewBotao}>
     <TouchableOpacity style={styles.buttonCad}>
-    <Text style={{ fontFamily: 'Caviar', color: "#fff", fontSize: 20 }}>Sign Up</Text>
+    <Text style={{ fontFamily: 'Caviar', color: "#fff", fontSize: 20 }}>Login</Text>
     </TouchableOpacity>
     </View>
   </View>
