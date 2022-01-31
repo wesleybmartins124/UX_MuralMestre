@@ -11,6 +11,7 @@ import Feed from './assets/src/Feed';
 import Sphere from './assets/Components/Sphere';
 import Status from './assets/Components/Status';
 import Post from './assets/Components/Post';
+import Content from './assets/Components/Content';
 
 const Stack = createStackNavigator();
 
@@ -52,6 +53,11 @@ export default function App()  {
         name="Post" 
         component={Post}
         options={{headerShown: false}} />
+
+<Stack.Screen 
+        name="Content" 
+        component={Content}
+        options={{headerShown: false}}  />
 
     </Stack.Navigator>
     

@@ -5,7 +5,7 @@ import {Ionicons} from '@expo/vector-icons';
 const Post = () => {
   const postInfo = [
     {
-        postTitle: 'Prof Ana Correia - Escola Técnica de São Paulo',
+        postTitle: 'Prof Ana Correia - Escola Primária Municipal',
         postPersonImage: require('../img/storage/images/profile2.jpg'),
         postImage: require('../img/storage/images/status2.jpg'),
         likes: 34,
@@ -29,7 +29,7 @@ const Post = () => {
         isLiked: false,
       },
       {
-        postTitle: 'Prof° Rodrigo Alonso - Escola de Tecnologia do ABC',
+        postTitle: 'Prof° Rodrigo Alonso - Escola de Letras do ABC',
         postPersonImage: require('../img/storage/images/profile3.jpg'),
         postImage: require('../img/storage/images/post4.jpg'),
         postContent: 'Tudo que preciso é silêncio e livros...',

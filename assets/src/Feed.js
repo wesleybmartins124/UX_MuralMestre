@@ -4,20 +4,24 @@ import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import { Block} from "galio-framework";
 import { LinearGradient } from 'expo-linear-gradient';
 import { useFonts } from 'expo-font';
+import { useNavigation } from '@react-navigation/native';
 import AppLoading from 'expo-app-loading';
-import {Ionicons} from '@expo/vector-icons';
-import { useScrollToTop } from '@react-navigation/native';
 import Sphere from '../Components/Sphere';
 import Post from '../Components/Post';
 
-export default function Perfil() {
+
+export default function Feed() {
     let [fontsLoaded] = useFonts({
         'Balivia': require('../fonts/Balivia.ttf'),
       });
     
       if (!fontsLoaded) {
         return <AppLoading />;
-      }
+      
+    }
+
+    const navigation = useNavigation();
+
     return(
         <ScrollView>
         <View style={styles.mainView}>
@@ -29,15 +33,16 @@ export default function Perfil() {
              <View style={styles.containerLogo}>
     <Image style={{width:500, marginTop:5, marginLeft:-62.3}} resizeMode = "contain" source ={require('../img/Letter.png')}></Image>
     </View>
+    <TouchableOpacity onPress={() => navigation.navigate('Content')}>
     <Image
                source ={require('../img/Veronica.png')}
                 style={styles.imageView }
               />
-                  
+     </TouchableOpacity>  
             <View style={styles.TextInputView}>
                 <TextInput placeholder={"Pesquisar..."} placeholderTextColor={"#898888"} style={styles.TextInput}/>
             </View>
-            <Text style={{ fontFamily: 'Balivia', fontSize:35, marginTop:-5,marginLeft:15 }}>Contatos...</Text>
+            <Text style={{ fontFamily: 'Balivia', fontSize:35, marginTop:-5,marginLeft:15 }}>Novas Esferas</Text>
             <Sphere />
             <Block style={styles.divider} />
 
