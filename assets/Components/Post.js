@@ -145,13 +145,13 @@ const Post = () => {
                     }}
                   />
                   <TextInput
-                    placeholder="Add a comment "
+                    placeholder="Adicionar comentário "
                     style={{opacity: 0.5}}
                   />
                 </View>
                 <View style={{flexDirection: 'row', alignItems: 'center'}}>
                   <Ionicons
-                    name="ribbon-outline"
+                    name="arrow-forward-circle-outline"
                     style={{fontSize: 19, color: '#07f49e', marginRight: 10}}
                   />
                 </View>
