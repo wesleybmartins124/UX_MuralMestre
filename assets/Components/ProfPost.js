@@ -1,47 +1,24 @@
 import React, {useState} from 'react';
 import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
+import { Block} from "galio-framework";
 
-const Post = () => {
+const ProfPost = () => {
   const postInfo = [
     {
-        postTitle: 'Prof Ana Correia - Escola Primária Municipal',
-        postPersonImage: require('../img/storage/images/profile2.jpg'),
-        postImage: require('../img/storage/images/status2.jpg'),
-        likes: 34,
-        postContent: 'As sementes de uma vida de estudos transforma-se em frutos de sucessos!',
+        postTitle: 'Você anexou uma menção.',
+        postPersonImage: require('../img/storage/images/me.jpg'),
+        postImage: require('../img/storage/images/cert.jpg'),
+        likes: 88,
+        postContent: 'Mais um certificado, agora em desenhos digitais',
         isLiked: false,
       },
     {
-      postTitle: 'Prof° André Takahashi - Colégio Nipônico',
-      postPersonImage: require('../img/storage/images/profile5.jpg'),
-      postImage: require('../img/storage/images/japanese.jpg'),
-      postContent: 'Palácio Japonês de Dresden - Alemanha. Um claro exemplo de barroco com influências orientais',
-      likes: 29,
-      isLiked: false,
-    },
-    {
-        postTitle: 'Prof Antônia Ferreira - Escola Técnica de São Paulo ',
-        postPersonImage: require('../img/storage/images/profile4.jpg'),
-        postImage: require('../img/storage/images/status4.jpeg'),
-        postContent: 'Educação muda as pessoas, e as pessoas mudam o mundo',
-        likes: 5,
-        isLiked: false,
-      },
-      {
-        postTitle: 'Prof° Rodrigo Alonso - Escola de Letras do ABC',
-        postPersonImage: require('../img/storage/images/profile3.jpg'),
-        postImage: require('../img/storage/images/post4.jpg'),
-        postContent: 'Tudo que preciso é silêncio e livros...',
-        likes: 19,
-        isLiked: false,
-      },
-    {
-      postTitle: 'Prof° Rafael - Escola de Tecnologia do ABC',
-      postPersonImage: require('../img/storage/images/profile1.jpg'),
-      postImage: require('../img/storage/images/post5.jpg'),
-      postContent: 'Nova casa novos desafios',
-      likes: 55,
+      postTitle: 'Você anexou um arquivo.',
+      postPersonImage: require('../img/storage/images/me.jpg'),
+      postImage: require('../img/storage/images/status0.jpg'),
+      postContent: 'E assim eles concluíram mais uma etapa em suas vidas!',
+      likes: 60,
       isLiked: false,
     }
   ];
@@ -75,6 +52,14 @@ const Post = () => {
                     {data.postTitle}
                   </Text>
                 </View>
+                <Block style={{     
+        width: "110%",
+        borderWidth: 1.5,
+        borderColor: "#CECECE",
+        marginTop:30,
+       marginLeft:-290,
+        marginBottom:-35
+      }} />
               </View>
             </View>
             <View
@@ -83,9 +68,17 @@ const Post = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
+                <Text
+                style={{
+                  fontSize: 20,
+                  marginLeft:2,
+                  paddingVertical: 2,
+                }}>
+              {data.postContent}
+              </Text>
               <Image
                 source={data.postImage}
-                style={{width: '100%', height: 300}}
+                style={{width: '100%', height: 200}}
               />
             </View>
             <View
@@ -117,16 +110,8 @@ const Post = () => {
             </View>
             <View style={{paddingHorizontal: 15, marginLeft:-8}}>
               <Text>
-                 {like ? 'Agora' : ''}{' '}
+                 {like ? 'Você' : ''}{' '}
                 {like ? data.likes + 1 : data.likes} pessoas gostaram
-              </Text>
-              <Text
-                style={{
-                  fontWeight: '700',
-                  fontSize: 14,
-                  paddingVertical: 2,
-                }}>
-              {data.postContent}
               </Text>
               <Text style={{opacity: 0.4, paddingVertical: 2}}>
                 Ver comentários
@@ -164,4 +149,4 @@ const Post = () => {
   );
 };
 
-export default Post;
+export default ProfPost;

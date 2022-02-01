@@ -11,6 +11,7 @@ import Feed from './assets/src/Feed';
 import Sphere from './assets/Components/Sphere';
 import Status from './assets/Components/Status';
 import Post from './assets/Components/Post';
+import ProfPost from './assets/Components/ProfPost';
 import Content from './assets/Components/Content';
 
 const Stack = createStackNavigator();
@@ -52,6 +53,11 @@ export default function App()  {
 <Stack.Screen 
         name="Post" 
         component={Post}
+        options={{headerShown: false}} />
+
+        <Stack.Screen 
+        name="ProfPost" 
+        component={ProfPost}
         options={{headerShown: false}} />
 
 <Stack.Screen 
