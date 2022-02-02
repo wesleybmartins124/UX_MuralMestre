@@ -39,6 +39,7 @@ export default function Components() {
                       marginLeft:10,
                       marginTop:8
                     }}
+                    onPress={() => navigation.goBack()}
                   />
                 </TouchableOpacity>
                 <View style={styles.ViewInit}> 
@@ -88,10 +89,10 @@ export default function Components() {
 <View>
 <Image source ={require('../img/storage/images/shadow.png')}  style={{width: 110, height: 110, marginLeft:200, marginTop:-93}}/>
               <Ionicons
-                    name= 'pencil-outline'
+                    name= 'calendar-outline'
                     style={{
                       paddingRight: 10,
-                      fontSize: 30,
+                      fontSize: 28,
                       color: '#0f68a9',
                       marginLeft:240,
                       marginTop:-60
@@ -120,7 +121,7 @@ export default function Components() {
             <Text style={{marginLeft:138, fontWeight:'bold', color: '#0f68a9',}}>Menções</Text>
             </View>
             <View>
-            <Text style={{marginLeft:223, fontWeight:'bold',marginTop:-40,  color: '#0f68a9',}}>Escrever</Text>
+            <Text style={{marginLeft:216, fontWeight:'bold',marginTop:-40,  color: '#0f68a9',}}>Calendário</Text>
             </View>
             <View>
             <Text style={{marginLeft:296, fontWeight:'bold', marginTop:-20, color: '#0f68a9',}}>Arquivos</Text>

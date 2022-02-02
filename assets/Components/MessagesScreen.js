@@ -6,6 +6,7 @@ import {
   UserInfo,
   UserImgWrapper,
   UserImg,
+  Topper,
   UserInfoText,
   UserName,
   PostTime,
@@ -16,44 +17,81 @@ import {
 const Messages = [
   {
     id: '1',
-    userName: 'Jenny Doe',
+    userName: 'Prof° André',
     userImg: require('../img/storage/images/profile5.jpg'),
-    messageTime: '4 mins ago',
+    messageTime: 'Nesse momento...',
     messageText:
-      'Hey there, this is my test for a post of my social app in React Native.',
+      'André: Tenho sim, se vc quiser vem pegar comigo na estação central amanhã.',
   },
   {
     id: '2',
-    userName: 'John Doe',
+    userName: 'Prof Antônia',
     userImg: require('../img/storage/images/profile4.jpg'),
-    messageTime: '2 hours ago',
+    messageTime: 'Há 3 horas',
     messageText:
-      'Hey there, this is my test for a post of my social app in React Native.',
+      'Você: Claro, vamos combinar de ir sim.',
   },
   {
     id: '3',
-    userName: 'Ken William',
+    userName: 'Prof° Rafael',
     userImg: require('../img/storage/images/profile1.jpg'),
-    messageTime: '1 hours ago',
+    messageTime: 'Há 5 Horas',
     messageText:
-      'Hey there, this is my test for a post of my social app in React Native.',
+      'Você: Oi Rafa',
   },
   {
     id: '4',
-    userName: 'Selina Paul',
+    userName: 'Prof Ana',
     userImg: require('../img/storage/images/profile2.jpg'),
-    messageTime: '1 day ago',
+    messageTime: 'Há 1 dia',
     messageText:
-      'Hey there, this is my test for a post of my social app in React Native.',
+      'Ana: Tem aquele livro lá na Biblioteca Municipal ',
   },
   {
     id: '5',
-    userName: 'Christy Alex',
+    userName: 'Prof° Rodrigo',
     userImg: require('../img/storage/images/profile3.jpg'),
-    messageTime: '2 days ago',
+    messageTime: 'Há 1 dia',
     messageText:
-      'Hey there, this is my test for a post of my social app in React Native.',
+      'Você: Tudo bem, dps nos falamos!',
   },
+
+  {
+    id: '6',
+    userName: 'Grupo dos professores - ESTESP',
+    userImg: require('../img/storage/images/amico.png'),
+    messageTime: 'Há 1 dia',
+    messageText:
+      'Raquel: O que acham de uma feira virtual?',
+  },
+
+  {
+    id: '7',
+    userName: 'Prof Raquel',
+    userImg: require('../img/storage/images/girl.jpg'),
+    messageTime: 'Há 1 dia',
+    messageText:
+      'Raquel: Vou propor essa ideia',
+  },
+
+  
+  {
+    id: '8',
+    userName: 'Prof Sophia',
+    userImg: require('../img/storage/images/getty.jpg'),
+    messageTime: 'Há 2 dias',
+    messageText:
+      'Você: Ok!',
+  },
+  {
+    id: '9',
+    userName: 'Prof Erick',
+    userImg: require('../img/storage/images/erick.jpg'),
+    messageTime: 'Há 3 dias',
+    messageText:
+      'Você: Ainda bem que deu tudo certo...',
+  },
+  
 ];
 
 const MessagesScreen = ({navigation}) => {
