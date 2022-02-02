@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet,Image,SafeAreaView, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet,Image,TouchableWithoutFeedback, ScrollView } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import { Block} from "galio-framework";
 import ProfPost from '../Components/ProfPost';
+import { useNavigation } from '@react-navigation/native';
 
 
 
@@ -18,6 +19,8 @@ export default function Components() {
         return <AppLoading />;
       
     }
+
+    const navigation = useNavigation();
 
  return (
  
@@ -117,7 +120,7 @@ export default function Components() {
             <Text style={{marginLeft:138, fontWeight:'bold', color: '#0f68a9',}}>Menções</Text>
             </View>
             <View>
-            <Text style={{marginLeft:233, fontWeight:'bold',marginTop:-40,  color: '#0f68a9',}}>Editar</Text>
+            <Text style={{marginLeft:223, fontWeight:'bold',marginTop:-40,  color: '#0f68a9',}}>Escrever</Text>
             </View>
             <View>
             <Text style={{marginLeft:296, fontWeight:'bold', marginTop:-20, color: '#0f68a9',}}>Arquivos</Text>
@@ -161,6 +164,11 @@ export default function Components() {
   </View>
   <Block style={styles.divider1} />
   <ProfPost/>
+  <TouchableWithoutFeedback onPress={() => navigation.navigate('Messages')} >
+         <View style={[styles.button, styles.menu]}>
+             <Ionicons name="chatbubbles-outline"  size={30} color="#FFF"/>
+         </View>
+     </TouchableWithoutFeedback>
   </ScrollView>     
 </View>  
 
@@ -199,5 +207,24 @@ const styles = StyleSheet.create({
         alignSelf:'center',
         marginBottom:15
       },
+      button:{
+        position:'absolute',
+        width: 55,
+        height: 55,
+        borderRadius: 55/2,
+        marginLeft:350,
+        marginTop:50,
+        justifyContent:'center',
+        alignItems:'center',
+        shadowRadius:10,
+        shadowColor: '#07f49e',
+        shadowOpacity: 0.3,
+        shadowOffset:{
+            height:10,
+        }
+    },
+    menu:{
+        backgroundColor:'#07f49e'
+    },
  
 })

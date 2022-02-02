@@ -13,6 +13,8 @@ import Status from './assets/Components/Status';
 import Post from './assets/Components/Post';
 import ProfPost from './assets/Components/ProfPost';
 import Content from './assets/Components/Content';
+import Chat from './assets/Components/Chat';
+import Messages from './assets/Components/MessagesScreen';
 
 const Stack = createStackNavigator();
 
@@ -63,6 +65,16 @@ export default function App()  {
 <Stack.Screen 
         name="Content" 
         component={Content}
+        options={{headerShown: false}}  />
+
+<Stack.Screen 
+        name="Chat" 
+        component={Chat}
+        options={{headerShown: false}}  />
+
+<Stack.Screen 
+        name="Messages" 
+        component={Messages}
         options={{headerShown: false}}  />
 
     </Stack.Navigator>

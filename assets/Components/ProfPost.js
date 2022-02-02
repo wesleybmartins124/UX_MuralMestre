@@ -110,11 +110,11 @@ const ProfPost = () => {
             </View>
             <View style={{paddingHorizontal: 15, marginLeft:-8}}>
               <Text>
-                 {like ? 'Você' : ''}{' '}
+                 {like ? 'Você e mais' : ''}{' '}
                 {like ? data.likes + 1 : data.likes} pessoas gostaram
               </Text>
               <Text style={{opacity: 0.4, paddingVertical: 2}}>
-                Ver comentários
+                Ver  comentários
               </Text>
               <View
                 style={{flexDirection: 'row', justifyContent: 'space-between'}}>
