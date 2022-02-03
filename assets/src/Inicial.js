@@ -35,7 +35,7 @@ export default function App() {
     </TouchableOpacity>
     </View>
     <View style={styles.viewBotao}>
-    <TouchableOpacity style={styles.buttonCad}>
+    <TouchableOpacity style={styles.buttonCad} onPress={() => navigation.navigate('Login')}>
     <Text style={{ fontFamily: 'Caviar', color: "#fff", fontSize: 20 }}>Login</Text>
     </TouchableOpacity>
     </View>

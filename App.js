@@ -7,6 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Inicial from './assets/src/Inicial';
 import SignIn from './assets/src/SignIn';
+import Login from './assets/src/Login';
 import Feed from './assets/src/Feed';
 import Sphere from './assets/Components/Sphere';
 import Status from './assets/Components/Status';
@@ -36,6 +37,12 @@ export default function App()  {
         name="SignIn" 
         component={SignIn}
         options={{headerShown: false}} />
+<Stack.Screen 
+        name="Login" 
+        component={Login}
+        options={{headerShown: false}} />
+
+
 
 <Stack.Screen 
         name="Feed" 

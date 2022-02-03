@@ -30,7 +30,7 @@ export default function SignIn() {
                  
                   <Block flex={0.25} middle>
                 <Text color="#8898AA" size={12}>
-                  Cadastre-se com :
+                  Login com :
                 </Text>
                </Block>
                       <Button style={styles.socialButtons}>
@@ -59,55 +59,7 @@ export default function SignIn() {
                   Ou continue abaixo:
                   </Text>
                 </Block>
-                    <Block >  
-                    <Image
-               source ={require('../img/Veronica.png')}
-                style={styles.avatar2}
-              />
-    
-    <TouchableOpacity style={styles.buttonCad}>
-    <Ionicons name="add-circle" color="#05BC93" size={70}/> 
-    </TouchableOpacity>
-    
-                    <Input
-                       
-                        placeholder="Name"
-                        style ={{backgroundColor:'#FFF'}}
-                        iconContent={
-                          <Ionicons name="person-outline" color="#0f68a9" size={20}/> }
-                          
-                    
-                 />
-
-                
-                   
-                  </Block>
-                
-                 
-                  <Block >  
-                    
-                    <Input
-      
-                        placeholder="Name"
-                        style ={{backgroundColor:'#FFF'}}
-                        iconContent={
-                          <Ionicons name="school-outline" color="#0f68a9" size={20}/> }
-                    
-                 />
-                  </Block>
-                
-
-                  <Block >  
-                    
-                    <Input
-                    
-                        placeholder="Name"
-                        style ={{backgroundColor:'#FFF'}}
-                        iconContent={
-                          <Ionicons name="card-outline" color="#0f68a9" size={20}/> }
-                    
-                 />
-                  </Block>
+            
 
             
                   <Block >  
@@ -117,7 +69,7 @@ export default function SignIn() {
                         placeholder="Name"
                         style ={{backgroundColor:'#FFF'}}
                         iconContent={
-                          <Ionicons name="lock-closed-outline" color="#0f68a9" size={20}/> }
+                          <Ionicons name="mail-outline" color="#0f68a9" size={20}/> }
                     
                  />
                   </Block>
@@ -128,7 +80,7 @@ export default function SignIn() {
                         placeholder="Name"
                         style ={{backgroundColor:'#FFF'}}
                         iconContent={
-                          <Ionicons name="mail-outline" color="#0f68a9" size={20}/> }
+                          <Ionicons name="lock-closed-outline" color="#0f68a9" size={20}/> }
                     
                  />
                   </Block>
@@ -139,7 +91,7 @@ export default function SignIn() {
                     >
                          <View style={styles.viewBotao2}>
                         <TouchableOpacity style={styles.buttonRegister} onPress={() => navigation.navigate('Feed')}>
-                        <Text style={{ fontFamily: 'Caviar', color: "#fff", fontSize: 20 }}>Cadastrar</Text>
+                        <Text style={{ fontFamily: 'Caviar', color: "#fff", fontSize: 20 }}>Login</Text>
                         </TouchableOpacity>
                         </View>
 
@@ -234,7 +186,7 @@ const styles = StyleSheet.create({
   },
   profileCard: {
     // position: "relative",
-    marginTop: 0,
+    marginTop: 150,
     padding: theme.SIZES.BASE,
    marginHorizontal: theme.SIZES.BASE,
     shadowColor: "black",

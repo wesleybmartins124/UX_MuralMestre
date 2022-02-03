@@ -12,7 +12,7 @@ import Post from '../Components/Post';
 
 export default function Feed() {
     let [fontsLoaded] = useFonts({
-        'Balivia': require('../fonts/Balivia.ttf'),
+        'Caviar': require('../fonts/CaviarDreams_Bold.ttf'),
       });
     
       if (!fontsLoaded) {
@@ -42,7 +42,7 @@ export default function Feed() {
             <View style={styles.TextInputView}>
                 <TextInput placeholder={"Pesquisar..."} placeholderTextColor={"#898888"} style={styles.TextInput}/>
             </View>
-            <Text style={{ fontFamily: 'Balivia', fontSize:35, marginTop:-5,marginLeft:15 }}>Novas Esferas</Text>
+            <Text style={{ fontFamily: 'Caviar', fontSize:25, marginTop:-5,marginLeft:15 }}>Novas Esferas</Text>
             <Sphere />
             <Block style={styles.divider} />
 
